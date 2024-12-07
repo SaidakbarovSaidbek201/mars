@@ -40,3 +40,20 @@ class Teachers(models.Model):
         verbose_name_plural = "O'qitovchilar"
     def __str__(self):
         return self.first_name
+    
+
+class Administrator(models.Model):
+    first_name = models.CharField(max_length = 256)
+    last_name = models.CharField(max_length = 256)
+    age = models.IntegerField()
+    salary = models.IntegerField()
+    work = models.CharField(max_length = 256)
+    work_time = models.TimeField()
+    filial = models.CharField(max_length = 256)
+
+    
+    class Meta:
+        verbose_name = "Administrator"
+        verbose_name_plural = "Administratorlar"
+    def __str__(self):
+        return self.first_name
